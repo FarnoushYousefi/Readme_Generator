@@ -25,11 +25,11 @@ function generateMarkdown(data) {
   const { License } = data;
   return `# ${data.title}
   ${renderLicenseBadge(data.License)}
-## Description
+# Description
 
 ${data.description}
 
-## Table of Contents
+# Table of Contents
 
 * [Installation](#Installation)
 * [Licenses](#Licenses)
@@ -42,17 +42,17 @@ ${data.description}
 
 ${data.description}
 
-## Installation
+# Installation
 
 \`\`\`
 ${data.installation}
 \`\`\`
 
-## Usage 
+# Usage 
 ${renderLicenseLink(License)}
 
 ${data.License}
-## Licenses
+# Licenses
 
 
 
