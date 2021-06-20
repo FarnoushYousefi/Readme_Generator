@@ -49,7 +49,7 @@ ${data.installation}
 \`\`\`
 
 ## Usage 
-${renderLicenseLink(data.License)[0]}
+${renderLicenseLink(License)}
 
 ${data.License}
 ## Licenses
