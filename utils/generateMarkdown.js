@@ -1,7 +1,7 @@
 // TODO: Create a function to generate markdown for README
 function renderLicenseBadge(license) {
   if (license !== 'None') {
-    return `![GitHub license](https://img.shields.io/badge/license-${license}-blue.svg)`;
+    return `[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/${license})`;
   }
   return '';
 }
@@ -22,7 +22,7 @@ This project is licensed under the ${license} license.`;
 
 function generateMarkdown(data) {
   console.log('data: ', data);
-  //const { License } = data;
+  const { License } = data;
   return `# ${data.title}
   ${renderLicenseBadge(data.License)}
 ##Description
@@ -37,6 +37,7 @@ ${data.description}
 
 
 [${data.github}](https://github.com/${data.github}/${data.title}/)
+#[shield](https://shields.io/)
 ## Description 
 
 ${data.description}
@@ -48,9 +49,9 @@ ${data.installation}
 \`\`\`
 
 ## Usage 
-${renderLicenseLink(data.License)}
+${renderLicenseLink(data.License)[0]}
 
-${data.Licesnse}
+${data.License}
 ## Licenses
 
 
