@@ -45,7 +45,7 @@ const questions = [
       if (title) {
         return true;
       } else {
-        console.log('You need to enter a project name!');
+        console.log('You need to enter a title of the project name!');
         return false;
       }
     },
@@ -97,6 +97,18 @@ const questions = [
     message: 'What is the License of this project? ',
     choices: ['MIT', 'Apache2.0', 'GPL3.0', 'BSD2Clause'],
   },
+  {
+    type: 'input',
+    name: 'test',
+    message: 'What command should be run to run tests?',
+    default: 'npm test',
+  },
+  {
+    type: 'input',
+    name: 'contributing',
+    message: 'What does the user need to know about contributing to the repo?',
+  },
+
   {
     type: 'input',
     name: 'instruction',

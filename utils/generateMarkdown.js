@@ -25,15 +25,23 @@ function generateMarkdown(data) {
   const { License } = data;
   return `# ${data.title}
   ${renderLicenseBadge(data.license)}
-# Description
+## Description
 
 ${data.description}
 
 # Table of Contents
 
 * [Installation](#installation)
-* [Licenses](#license)
+* [Usage](#usage)
 
+
+* [Tests](#tests)
+
+* [Questions](#questions)
+* [Contributing](#contributing)
+
+* [Licenses](#license)
+* [Questions](#questions)
 
 
 [${data.github}](https://github.com/${data.github}/${data.title}/)
@@ -47,12 +55,28 @@ ${data.description}
 \`\`\`
 ${data.installation}
 \`\`\`
+## Usage
+
+${data.usage}
+
 
 
 ## License
 ${data.license}
-${renderLicenseSection(data.license)}
 
+${renderLicenseLink(data.license)}
+## Contributing
+
+${data.contributing}
+
+## Tests
+
+To run tests, run the following command:
+
+\`\`\`
+${data.test}
+\`\`\`
+## Questions
 If you have any questions about the repo, open an issue or contact me directly at ${
     data.email
   }. You can find more of my work at [${data.github}](https://github.com/${
