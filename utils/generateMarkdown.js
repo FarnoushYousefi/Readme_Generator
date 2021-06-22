@@ -31,8 +31,8 @@ ${data.description}
 
 # Table of Contents
 
-* [Installation](#Installation)
-* [Licenses](#Licenses)
+* [Installation](#installation)
+* [Licenses](#License)
 
 
 
@@ -42,19 +42,16 @@ ${data.description}
 
 ${data.description}
 
-# Installation
+## Installation
 
 \`\`\`
 ${data.installation}
 \`\`\`
 
-# Usage 
-${renderLicenseLink(License)}
 
+## License
 ${data.License}
-# Licenses
-
-
+${renderLicenseLink(License)}
 
 If you have any questions about the repo, open an issue or contact me directly at ${
     data.email
