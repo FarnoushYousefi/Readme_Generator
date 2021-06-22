@@ -93,7 +93,7 @@ const questions = [
   },
   {
     type: 'list',
-    name: 'License',
+    name: 'license',
     message: 'What is the License of this project? ',
     choices: ['MIT', 'Apache2.0', 'GPL3.0', 'BSD2Clause'],
   },

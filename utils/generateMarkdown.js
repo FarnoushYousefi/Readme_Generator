@@ -1,7 +1,7 @@
 // TODO: Create a function to generate markdown for README
 function renderLicenseBadge(license) {
   if (license !== 'None') {
-    return `[![License](https://img.shields.io/badge/License-${license}-blue.svg)](https://opensource.org/licenses/${license})`;
+    return `[![License](https://img.shields.io/badge/License-${license}-blue)](https://opensource.org/licenses/${license})`;
   }
   return '';
 }
@@ -24,7 +24,7 @@ function generateMarkdown(data) {
   console.log('data: ', data);
   const { License } = data;
   return `# ${data.title}
-  ${renderLicenseBadge(data.License)}
+  ${renderLicenseBadge(data.license)}
 # Description
 
 ${data.description}
@@ -32,7 +32,7 @@ ${data.description}
 # Table of Contents
 
 * [Installation](#installation)
-* [Licenses](#License)
+* [Licenses](#license)
 
 
 
@@ -50,8 +50,8 @@ ${data.installation}
 
 
 ## License
-${data.License}
-${renderLicenseLink(License)}
+${data.license}
+${renderLicenseSection(data.license)}
 
 If you have any questions about the repo, open an issue or contact me directly at ${
     data.email
